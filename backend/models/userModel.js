@@ -1,5 +1,6 @@
 const pool = require('../config/db');
 
+
 const User = {
   async create(username, hashedPassword) {
     const query = 'INSERT INTO users (username, password) VALUES ($1, $2) RETURNING *';
